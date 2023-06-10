@@ -1,0 +1,43 @@
+---
+layout: default
+author_profile: false
+---
+<style>
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-wrapper {
+    width: 30em;
+  }
+</style>
+<div class="form-container">
+  <div class="form-wrapper">
+    <form>
+      <input type="text" name="email" id="inputEmail" placeholder="이메일을 입력해주세요.">
+      <input type="submit" id="submitEmail" value="제출">
+    </form>
+  </div>
+</div>
+
+<script>
+  // 이메일 형식 체크
+  const $emailInput = document.querySelector('#inputEmail');
+  const $submitEmail = document.querySelector('#submitEmail');
+
+  const regExpEmail = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+
+  let email = ''
+  $submitEmail.addEventListener('click', () => {
+    if (regExpEmail.test(email)) {
+      alert('사용가능한 이메일입니다.')
+    } else {
+      alert('잘못된 이메일 형식입니다.')
+    }
+  })
+  $emailInput.addEventListener('input', (e) => {
+    email = e.target.value;
+  })
+</script>
