@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "31장 RegExp"
-categories: Javascript
+categories: avascript
 tag: [python, blog]
 toc: true
 author_profile: false
