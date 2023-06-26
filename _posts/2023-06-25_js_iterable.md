@@ -110,9 +110,24 @@ for (변수선언문 of 이터러블) { ... }
 - 그리고 이터레이터 리절트 객체의 done 프로퍼티 값이 false이면 이터러블의 순회를 계속하고 true이면 이터러블의 순회를 중단한다.<br>
 - ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/cac29fe1-e070-4776-802a-c038895903e2)
 
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/ce981fa8-b6a9-49c2-a3c7-668e16646170)
 
+## 34.4 이터러블과 유사 배열 객체
+유사 배열 객체는 마치 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있고 length 프로퍼티를 갖는 객체를 말한다.
+유사배열 객체는 length 프로퍼티를 갖기 때문에 for문으로 순회할 수 있고, 인덱스를 나타내는 숫자 형식의 문자열을 프로퍼티 키로 가지므로 마치 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있다.
+유사 배열 객체는 이터러블이 아닌 일반 객체다. 따라서 유사 배열 객체에는 Symbol.iterator 메서드가 없기 때문에 for...of 문으로 순회할 수 없다.
+ES6에서 이터러블이 도입되면서 유사 배열 객체인 arguments, NodeList, HTMLCollection 객체에 Symbol.iterator 메서드를 구현하여 이터러블이 되었다.
+하지만 모든 유사 배열 객체가 이터러블인 것은 아니다. 다만 ES6에서 도입된 Array.from 메서드를 사용하여 배열로 간단히 변환할 수 있다.
 
+## 34.5 이터레이션 프로토콜의 필요성
+- 데이터 소비자: for...of 문, 스프레드 문법, 배열 디스트럭처링 할당
+- 데이터 공급자: Array, String, Map, Set,,,
+이터러블을 지원하는 데이터 소비자는 내부에서 Symbol.iterator 메서드를 호출해 이터레이터를 생성하고 이터레이터의 next 메서드를 호출하여 이터러블을 순회하며 이터레이터 리절트 객체를 바놘 그리고 이터레이터 리절트 객체의 value/done 프로퍼티 값을 취득
 
+## 34.6 사용자 정의 이터러블
+### 34.6.1 사용자 정의 이터러블 구현
+
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/5f772511-1c54-4d96-9549-cb093d171944)
 
 
 
