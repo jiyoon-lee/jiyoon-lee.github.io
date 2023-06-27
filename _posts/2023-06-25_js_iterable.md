@@ -134,7 +134,24 @@ ES6에서 이터러블이 도입되면서 유사 배열 객체인 arguments, Nod
 - for...of문은 done 프로퍼티가 true가 될 때까지 반복하며 done프로퍼티가 true가 되면 반복을 중지
 
 ### 34.6.2
+앞에서 살펴본 fibonacci 이터러블은 내부에 수열의 최대값 max를 가지고 있다.
+이 수열의 최대값은 고정된 값으로 외부에서 전달한 값으로 변경할 방법이 없다는 아쉬움이 있다.
+수열의 최대값을 외부에서 전달할 수 있도록 수정해 보자.
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/12967bde-46e1-41a5-98d0-6d31454b4f1c)
 
+### 34.6.3 이터러블이면서 이터레이터인 객체를 생성하는 함수
+fibonacciFunc 함수는 이터러블을 반환한다. 만약 이터레이터를 생성하려면 이터러블의 Symbol.iterator 메서드를 호출해야 한다. 
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/9bb9d568-5e9b-48ca-bce6-67acd0a077d3)
+이터러블이면서 이터레이터인 객체를 생성하려면 Symbo.iterator 메서드를 호출하지 않아도 된다.
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/d8279026-89a3-4187-ad18-73af5dd18890)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/8ab9cc08-3f5a-41ba-a90c-5d3b35761492)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/a420c125-4a64-43c1-9bc5-3c22526fe78a)
+
+### 34.6.4 무한 이터러블과 지연 평가
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/fcce0f3e-5d0d-43d1-b630-aaa04fa9437d)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/05944275-eafb-4536-aac6-555f40f9a8bd)
+
+- 배열이나 문자열 등은 모든 데이터를 메모리에 미리 확보한 다음 데이터를 공급한다. 하지만 위 예제의 이터러블은 지연 평가를 통해 데이터를 생성한다. 지연 평가는 데이터가 필요한 시점 이전까지는 미리 데이터를 생성하지 않다가 데이터가 필요한 시점이 되면 그때야 비로소 데이터를 생성하는 기법이다.
 
 
 
