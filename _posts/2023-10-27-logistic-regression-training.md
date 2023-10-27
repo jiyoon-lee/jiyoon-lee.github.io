@@ -90,5 +90,42 @@ titanic['Sex'] = titanic['Sex'].map(gender_dict)
 잘 제거되었는지 확인합니다.
 
 <figure style="width: 500px">
-  <img src="https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/ad6428dc-baae-46d3-84ac-928245f1cd4b" alt="">
+  <img src="https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/f80585d5-331b-4983-ae29-69730c8daebb" alt="">
 </figure>
+
+
+### 결측치 제거
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/01c137a8-d766-41c7-99c8-995bda563f30)
+
+- Embarked 결측치 채우기
+Embarked 컬럼은 결측치가 2개이므로 'Q'로 대체해서 사용하겠습니다.
+```
+titanic['Embarked'] = titanic['Embarked'].fillna('Q')
+```
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/c1373725-2469-4b85-81c8-3d41dad32f42)
+
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/a5f9f77f-68f4-4686-a01e-aa038e18adc3)
+
+- Age으 결측치 채우기
+  ```python
+  titanic['Age'] = titanic['Age'].fillna(titanic['Age'].mean())
+  ```
+
+나이의 range가 너무 크다.
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/a54e840a-93ab-4145-bb21-ba0c89e2eb39)
+구간(Binning) 처리를 합니다.
+- 8세 미만 = 0
+- 8세 이상 20살 미만 = 1
+- 20세 이상 65세 미만 = 2
+- 65세 이상 = 3
+  ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/36b6dbb3-76fb-4aad-9f7f-5acc44c78d16)
+
+### Training data set 준비
+```python
+x_data = titanic.drop('Survived', axis=1, inplace=False).values
+t_data = titanic['Survived'].values.reshape(-1, 1)
+```
+training data와 test data로 분리해야 합니다.
+training data는 다시 training과 validation용으로 나누어줍니다.
+validation 데이터를 나눠서 중간평가 하는 것은 Keras가 대신 해줍니다.
+따라서 특별한 경우가 아니라면 validation data는 Keras를 이용해서 처리하면 됩니다.
