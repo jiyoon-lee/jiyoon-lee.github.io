@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  background-color: #fbfbfb;
   margin: 0;
   padding: 0;
   color: $text-color;
@@ -64,7 +65,7 @@ small,
 }
 
 p {
-  margin-bottom: 1.3em;
+  font-size: $type-size-6;
 }
 
 u,
@@ -212,14 +213,13 @@ figure {
     transition: $global-transition;
   }
 
-  >a {
+  > a {
     display: block;
   }
 
   &.half {
-
-    >a,
-    >img {
+    > a,
+    > img {
       @include breakpoint($small) {
         width: calc(50% - 0.5em);
       }
@@ -231,9 +231,8 @@ figure {
   }
 
   &.third {
-
-    >a,
-    >img {
+    > a,
+    > img {
       @include breakpoint($small) {
         width: calc(33.3333% - 0.5em);
       }
