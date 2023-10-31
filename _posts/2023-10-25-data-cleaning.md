@@ -1,10 +1,10 @@
-데이터 분석을 하기 전에 데이터를 정제처리해주어야 합니다.
-결측값, 이상치, 정규화를 처리해주지 않으면 
-
+데이터 분석을 하기 전에 데이터를 정제처리해주어야 합니다.<br>
+결측값, 이상치, 정규화를 처리해주지 않으면 품질이 낮은 모델이 얻게될 수 있습니다.<br>
 데이터 전처리 과정을 배워봅시다.
+
 # 결치값
-데이터 값이 존재하지 않는 것을 의미합니다.
-1. df.info()를 출력하여 결치값이 있는지 확인합니다.
+데이터 값이 존재하지 않는 것을 의미합니다.<br>
+1. df.info()를 출력하여 결치값이 있는지 확인합니다.<br>
    ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/43b26fb4-9c15-48e4-a7c8-78e72cc14b81)
 2. 결치값이 있다면 일단 삭제처리 하겠습니다.
    ```python
@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 data = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,22.1])
 ```
 
-1. Tukey's Fences(사분위 기반)
+1. **Tukey's Fences(사분위 기반)**<br>
    위의 데이터셋의 그래프를 그려보겠습니다.
    ```python
    fig = plt.figure() # 도화지를 준비합니다.
@@ -62,7 +62,7 @@ data = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,22.1])
    ```
 ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/4d28aa16-6cc3-49ff-8b5f-3ec71f68ef1b)
 
-3. Z-Score(정규분포)
+2. **Z-Score(정규분포)**<br>
    Z-Score은 아래와 같이 정규분포를 그립니다.
   ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/cca8611b-7837-4139-9cf6-f20b86986837)
   ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/0e0d71c0-3571-4b16-ac6b-50234f11108a)
@@ -72,7 +72,7 @@ data = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,22.1])
 예를 들어, 우리나라 아파트 가격을 구하는 모델을 도출할 때 방 개수를 데이터셋으로 사용한다고 가정해봅시다.<br>
 대부분의 아파트의 방의 개수는 일의 자리수일겁니다. 그런데 어떤 한 집만 방의 개수가 100개라고 한다면 갑자기 평균이 확 올라가고 모델의 정확도가 떨어질 우려가 발생합니다.<br>
 데이터는 -1에서 1사이의 범위를 유지하는 것이 모델의 정확도를 높일 수 있는 방법입니다.<br>
-정규화 방식 중 유명한 두가지 방식에 대해 학습해보겠습니다.
+정규화 방식 중 유명한 두가지 방식에 대해 학습해보겠습니다.<br>
 - MinMaxScaling(최대, 최소 0~1)
 - Standardization(표준화, 정규분포)
 
