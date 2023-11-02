@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 multinomial classification 다중 분류
 logistic regression 여러 개를 모아서 model로 구현
 ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/48ad29ce-b6cf-4207-a45d-7e2003b442e2)
@@ -156,3 +157,11 @@ model.fit(x_data, t_data, epochs=1000, verbose=1)
 model.summary()
 ```
 ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/9b108b02-8f0d-401d-8d4f-e1b37b1eb4b1)
+=======
+다중분류란 이항(이진)분류를 여러개 모아놓은것을 말한다.
+
+Fail과 Pass로 분류를 한다면 이것은 이진분류가 됩니다.
+이때 Fail과 Pass를 클래스라고 지칭합니다.
+그렇다면 이 클래스가 여러개가 있으면 다중분류라고 합니다.
+예를 들어, '성적'과 '출석'으로 '등급'을 매긴다고 했을때 등급이 A,B,C,D,E가 있다면 5개의 등급으로 분류하기 때문에 다중분류라고 합니다.
+>>>>>>> 9731d75373d58ea177bcc47eb696d839977d328e
