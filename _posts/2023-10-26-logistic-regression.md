@@ -1,4 +1,7 @@
-![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/2511671b-bef9-43d9-84ad-653412fe063a)# 이진분류
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/2511671b-bef9-43d9-84ad-653412fe063a)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/93bc1eb5-679f-4baf-9a5f-ba27ecdf64f2)
+
+# 이진분류
 Linear Regression을 통해 얻게되는 모델의 예측값은 연속적인 숫자값이 나옵니다.<br>
 만약 연속적인 숫자를 예측하는 것이 아니라 분류를 예측하려면 어떻게 해야할까요? 기존의 linear regression이 아닌 다른 방식을 사용하여야 합니다.<br>
 예를 들어 시험을 쳤을 경우 시험 결과로 Fail과 Pass로 분류될 수 있습니다.<br>
