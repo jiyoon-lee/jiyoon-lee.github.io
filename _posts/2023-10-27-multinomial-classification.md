@@ -34,7 +34,8 @@ resize_img = img.resize((int(img.size[0]/2), int(img.size[1]/2)))
 plt.imshow(resize_img)
 plt.show()
 ```
-![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/02c421cd-6956-4978-bb4f-2e57087abdf3)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/bfe77c83-de46-4dc6-9859-0768efd8c341)
+
 
 이미지 회전
 ```python
