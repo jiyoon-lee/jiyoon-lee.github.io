@@ -1,29 +1,48 @@
-Deep Learning은 학습데이터량이 많아야 합니다.
-많다는 기준은 10만개 이상을 가리킵니다.
-일반적으로 현실에서 얻을 수 있는 데이터의 양에는 한계가 있습니다.
-특히 vision 쪽은 더 Data를 얻기가 어렵습니다.
-적은 양의 Data를 이용해서 학습하는 방안을 모색해야 합니다.
+---
+layout: single
+title: "Anaconda 환경에서 Jupyter Notebook 사용하기"
+categories: AI
+tag: [AI, 빅데이터]
+toc: true
+author_profile: false
+# sidebar:
+#   nav: "docs"
+toc: true
+---
 
-[개와 고양이 판별 예제]를 통해 배워봅시다.
-실사 이미지로 고양이와 강아지의 사진이 제공되는데요. 이것을 이진분류 해 봅시다.
-→ 이 작업을 위해 아나콘를 설치합니다.
+Deep Learning은 학습데이터량이 많아야 합니다.<br>
+많다는 기준은 10만개 이상을 가리킵니다.<br>
+일반적으로 현실에서 얻을 수 있는 데이터의 양에는 한계가 있습니다.<br>
+특히 vision 쪽은 더욱이 데이터를 얻기가 어렵습니다.<br>
+그러므로 적은 양의 Data를 이용해서 학습할 수 있는 방법을 모색해야 합니다.
 
-아나콘다는 가상환경으로 구성되어 있습니다. 하나하나의 가상환경은 독립적인 공간입니다.
-기본적으로 아나콘다를 설치하면 `BASE`라는 가상환경이 이미 생성되어 있습니다.
+그 방법은 [개와 고양이 판별 예제]를 통해 배워보겠습니다.<br>
+실사 이미지로 고양이와 강아지의 사진이 제공되는데요.<br>
+이것을 이진분류 해봅시다.<br>
+→ 이 작업을 위해 Anaconda를 설치합니다.
+
+Anaconda는 가상환경으로 구성되어 있습니다.<br>
+하나하나의 가상환경은 독립적인 공간입니다.<br>
+기본적으로 Anaconda를 설치하면 `BASE`라는 가상환경이 이미 생성되어 있습니다.<br>
 이 `BASE`가상환경에서 `data_env`라는 새로운 가상환경을 생성합니다.
 
-`Anaconda Prompt`를 실행합니다.
+Anaconda 홈페이지에서 Anaconda를 설치합니다.<br>
+설치가 완료되었다면 Anaconda Prompt를 실행합니다.<br>
+
 ```python
 # 가상공간 생성
 conda create -n data_env python=3.8 openssl
 
 # 가상공간 진입
-```python
 conda activate data_env
 ```
-![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/227d911d-311b-4e75-ad2a-42084ca8a7e2)
+
+<figure style="width: 300px" class="image">
+    <img src="https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/227d911d-311b-4e75-ad2a-42084ca8a7e2" />
+</figure>
 이제 필요한 모듈을 설치합니다.
 설치 방법에는 두가지가 있습니다.
+
 - pip: 기본이며 필요한 모듈을 그냥 설치합니다.
 - conda: dependency를 맞춰줍니다.
 
@@ -36,9 +55,11 @@ conda install nb_conda # Jupyter notebook 설치
 
 Jupyter notbook의 Home 폴더를 만듭니다.
 코드 작성하는 Home 폴더로 사용할 겁니다.
+
 ```python
 C:\jupyter_home # 폴더를 생성합니다.
 ```
+
 Jupyter notebook을 실행합니다.
 ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/0ab881eb-39a6-4a41-8163-eb7a3b7cb822)
 자동으로 아래의 페이지가 열리는데요.<br>
@@ -56,4 +77,3 @@ Jupyter notebook을 실행합니다.
 `dev-env`를 클릭하면 colab과 같은 화면이 보입니다!!!
 ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/cc32a5b2-d9cf-4b83-a76c-672fd31cd939)
 이렇게 환경구축은 끝났습니다!
-
