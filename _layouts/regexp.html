@@ -2,6 +2,37 @@
 layout: default
 author_profile: false
 ---
+
+<body>
+  <ul>
+    <ul id="fruits1">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+    </ul>
+    <ul id="fruits2">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+    </ul>
+  </ul>
+  <ul>
+    <li>HTML</li>
+  </ul>
+  <style>
+  </style>
+  <script>
+    // DOM 전체에서 태그 이름이 li인 요소 노드를 모두 탐색하여 반환한다.
+    const $listFromDocument = document.getElementsByTagName('li');
+    console.log($listFromDocument)
+
+    const $fruits = document.getElementById('fruits');
+    const $listFromFruits = $fruits.getElementsByTagName('li');
+
+  </script>
+</body>
+
+
 <style>
   .form-container {
     display: flex;
@@ -19,6 +50,7 @@ author_profile: false
       <input type="text" name="email" id="inputEmail" placeholder="이메일을 입력해주세요.">
       <input type="submit" id="submitEmail" value="제출">
     </form>
+    <!-- Base url을 추출하시오. -->
   </div>
 </div>
 

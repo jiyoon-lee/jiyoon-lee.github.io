@@ -13,7 +13,6 @@ main:
   - title: "Search"
     url: /search/
 
-
 docs:
   - title: "FRONTEND"
     children:
@@ -33,6 +32,8 @@ docs:
         url: /categories/bundling
       - title: "Third-party libraries"
         url: /categories/third-party
+      - title: "AI"
+        url: /categories/ai
   - title: "BACKEND"
     children:
       - title: "Node.js"
