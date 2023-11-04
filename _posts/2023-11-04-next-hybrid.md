@@ -1,3 +1,14 @@
+---
+layout: single
+title: "Next.js의 Hydration"
+categories: React
+tag: [React]
+toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
+toc: true
+---
 # 렌더링의 종류
 ## CSR(Client Side Rendering)
 - **렌더링하는 주체가 클라이언트-브라우저**입니다.
