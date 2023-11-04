@@ -1,3 +1,14 @@
+---
+layout: single
+title: "Server Component vs Client Component"
+categories: React
+tag: [python, blog]
+toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
+toc: true
+---
 # v12
 - 페이지 단위로 렌더링 방식을 규정합니다.
 - SSR은 `getSeverSideProps()`를 사용합니다.
