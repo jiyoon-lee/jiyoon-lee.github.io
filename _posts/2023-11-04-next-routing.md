@@ -1,3 +1,14 @@
+---
+layout: single
+title: "Next.js의 File Base Routing"
+categories: React
+tag: [React]
+toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
+toc: true
+---
 ## Next.js v12
 
 ### File Base Routing
