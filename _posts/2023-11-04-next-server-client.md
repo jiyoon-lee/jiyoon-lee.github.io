@@ -28,3 +28,5 @@ toc: true
 1. 서버 컴포넌트는 서버에서 실행됩니다.
 2. 클라이언트는 HTML형태로 서버에서 받아옵니다.
 3. 서버 컴포넌트는 브라우저에서 제공하는 API는 사용할 수 없고 Node api를 사용할 수 있습니다.
+   ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/609d162a-6985-4d32-a9a6-0f0f18f1a4ed)
+
