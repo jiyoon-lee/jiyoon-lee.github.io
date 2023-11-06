@@ -59,5 +59,14 @@ Darknet System은 머신러닝, 딥러닝을 위한 open source framework입니�
    ![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/f857babc-c923-4bf0-8a41-26fdaa5dfe5a)
 
 
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/92adb52f-0d0e-497b-ba90-a431e491fa20)
+width, heigtㅅ cnn에 들어갈 이미지의 가로, 세로 길이
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/06f203fd-1279-43d5-acbd-628fcf5a960a)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/1e53d6f1-5000-43dc-a358-8643ebcba0d4)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/cdb38030-f279-4940-858c-244383e5c3bf)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/8fbb71ae-b262-49d7-8a60-0dec8b3c2a2b)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/973f4ac4-d923-4448-8226-cf87389e58af)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/acbc87e6-a461-435c-a6b0-90d9975df9f9)
 
-
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/c6901d87-f49d-4e5f-a378-eb1478bbed47)
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/5331a35a-7525-4b44-b87d-7ea4fb745ced)
