@@ -7,7 +7,7 @@ post.id %} {% assign title = post.title | markdownify | remove: "
 <article class="post">
   <a
     class="post-thumbnail"
-    style="background-image: url(/assets/images/posts/{{post.name}}.png"
+    style="background-image: url(/assets/images/posts/{{%post.name%}}.png"
     href="{{ post.url | relative_url }}"
   ></a>
   <div class="post-content">
