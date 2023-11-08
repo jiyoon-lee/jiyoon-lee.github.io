@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Next.js의 File Base Routing"
 categories: React
 tag: [React]

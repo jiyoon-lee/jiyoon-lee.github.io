@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "History API"
 categories: javascript
 tag: [python, blog]
