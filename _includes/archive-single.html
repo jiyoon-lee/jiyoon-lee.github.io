@@ -7,6 +7,8 @@ post.name | append: ".png')" %} {% else %} {% assign title = post.title %} {%
 endif %}
 
 <article class="post">
+  <span>{{post.name}}</span>
+  <span>{{post.url}}</span>
   <a
     class="post-thumbnail"
     style="{{imgUrl}}"
