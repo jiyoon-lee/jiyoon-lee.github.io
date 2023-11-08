@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "39장 DOM"
 categories: javascript
 tag: [python, blog]

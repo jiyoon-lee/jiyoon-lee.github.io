@@ -7,8 +7,8 @@ post.name | append: ".png')" %} {% else %} {% assign title = post.title %} {%
 endif %}
 
 <article class="post">
-  <span>{{post.name}}</span>
-  <span>{{post.url}}</span>
+  <!-- <span>{{ post.path }}</span> -->
+  <span>{{ post.path | split: '/' | last | split: '.' | first }}</span>
   <a
     class="post-thumbnail"
     style="{{imgUrl}}"

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Anaconda 환경에서 Jupyter Notebook 사용하기"
 categories: AI
 tag: [AI, 빅데이터]

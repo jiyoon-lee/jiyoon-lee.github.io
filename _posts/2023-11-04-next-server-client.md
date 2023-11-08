@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Server Component vs Client Component"
 categories: React
 tag: [python, blog]
