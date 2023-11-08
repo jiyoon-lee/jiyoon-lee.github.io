@@ -2,12 +2,14 @@
 endcapture %} {% else %} {% assign teaser = site.teaser %} {% endif %} {% if
 post.id %} {% assign title = post.title | markdownify | remove: "
 <p>" | remove: "</p>
-" %} {% else %} {% assign title = post.title %} {% endif %}
+" %} {% assign imgUrl = "background-image: url('/assets/images/posts/" | append:
+post.name | append: ".png')" %} {% else %} {% assign title = post.title %} {%
+endif %}
 
 <article class="post">
   <a
     class="post-thumbnail"
-    style="background-image: url(/assets/images/posts/{{%post.name%}}.png"
+    style="{{imgUrl}}"
     href="{{ post.url | relative_url }}"
   ></a>
   <div class="post-content">
