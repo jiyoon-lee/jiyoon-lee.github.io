@@ -43,3 +43,10 @@ revalidate를 0으로 해도 SSR이 되고 `no-store`로 해도 SSR이 됩니다
 
 # CSR
 CSR로 만들기위해서는 클라이언트 컴포넌트에서 API를 호출하면 됩니다.
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/51884c6e-679a-45ff-9ced-38a1e027b008)
+그러면 페이지를 새로고침할때마다 api를 호출하는 것을 확인할 수 있습니다.
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/32833dd3-ad60-441f-a969-d7901026d748)
+또한 서버로 부터 받은 정적 HTML에도 초기 설정한 text인 '데이터 준비중...'을 확인할 수 없습니다.
+![image](https://github.com/jiyoon-lee/jiyoon-lee.github.io/assets/59562141/aaf59e6a-a7e9-4d8b-88a5-bfc63c7d3235)
+이렇듯 Next는 모든 파일들을 돌아다니면서 정적 HTML로 만들 수 있는 것은 미리 다 만들어놓습니다.
+이후에 만약 어떤 소스가 클라이언트 컴포넌트라면 이 부분만 클라이언트에게 보내주고 클라이언트에서 hydration이 일어나면 이벤트가 실행되고 업데이트되는 원리입니다.
