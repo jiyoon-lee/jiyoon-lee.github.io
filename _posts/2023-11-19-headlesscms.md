@@ -101,3 +101,12 @@ export default {
   ]
 }
 ```
+
+사용할 때는 동일한 schemas폴더 안에 있는 index.js파일에
+```js
+// shcemas/index.js
+import pet from './pet'
+
+export default schemaTypes = [pet]
+
+```
