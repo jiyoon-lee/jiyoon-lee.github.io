@@ -65,4 +65,39 @@ Sanity Studio는 생성하고 수정하고 켄텐츠와 함께 일을 할수 있
  - sanity studio는 Content Lake라는 sanity hosted APIs에 접속합니다.
  - 너의 컨텐츠는 항상 sanity studio와 함께 동기화가 되어있을거고 절대 로컬상으로 저장되어 있지않습니다.
  - 클라우드 상에 데이터가 보관되어 있고 studio와 함께 동기화가 이루어져서 우리는 데이터를 확인할 수 있습니다.
- - 
+ - 실제 데이터는 우리 로컬상에 있는 것이 아니라 클라우드 상에 있습니다.
+
+터미널에서 스튜디오를 실행하면 admin을 위한 편집할 수 있는 브라우저 환경을 보여줍니다 => preview
+실제 데이터는 클라우드에 있으며 다른 사람들을 초대해서 사용할 수도 있습니다.
+
+
+schemas폴더는 우리가 필요한 document type(컨텐츠 타입)을 정의하는 곳입니다.
+sanity.config.js 여러가지 studio에 관련된 (project, dataset과 같은 정보)configuration을 할 수 있는 곳입니다.
+
+pets라는 심플한 컨텐츠 모델을 만들어봅시다.
+애완동물에 대한 정보를 담고 있는데 데이터 모델에 대한 스키마를 만들어 볼겁니다.
+sanity studio는 스키마로 부터 자동으로 ui admin창을 만들어줍니다.
+schema란 어떤 데이터 모델이 있는지 묘사하는 것입니다. 
+
+document type은 collection과 비슷한데 NoSQL 또는 firebase와 비슷합니다.
+관계가 없는 json과 같은 데이터 구조를 가지고 갑니다.
+json문서와 같은 데이터 모델을 만들어줄것이며 이 스키마는 `_type`이라는 속성을 통해서 나타납니다.
+
+schemas라는 폴더에 pet.js라는 파일을 만들면 애완동물 데이터 타입을 묘사할 준비가 됩니다. 
+pet안에는 어떤 필드가 있고 어떤 데이터 타입이 있는지 묘사해주면 됩니다. 
+```js
+// schemas/pet.js
+export default {
+  name: 'pet',  // 데이터의 이름은 pet 입니다.
+  type: 'document', // type은 문서입니다.
+  title: 'Pet', // sanity studio에서 보여줄때는 Pet이라는 이름으로 보여줍니다.
+  fields: [ // Pet에는 어떤 field가 있냐면
+    { // 배열 안에 여러개의 field를 넣어주면 됩니다.
+      // 지금은 딱 하나의 field가 있습니다.
+      name: 'name', // field의 name 'name'입니다. 
+      type: 'string', // field의 type은 string 입니다.
+      title: 'Name', // 관리자 콘솔인 sanity studio에서 보여줄 title은 'Name'으로 보여줍니다.
+    }
+  ]
+}
+```
