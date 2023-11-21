@@ -107,6 +107,7 @@ export default {
 // shcemas/index.js
 import pet from './pet'
 
-export default schemaTypes = [pet]
-
+export default schemaTypes = [pet] // 우리가 사용하고자 하는 스키마 타입에 추가해주면 됩니다.
 ```
+그 이후 `npm run dev`로 실행만 시켜줍니다면 우리가 만든 스키마 타입이 content type에 자동으로 동기화 되기 때문에
+우리가 정의한 스키마가 자동으로 저장이 되고 sanity studio에서 데이터를 추가한다면 자동으로 동기화되어 content lake에도 동기화가 됩니다.
